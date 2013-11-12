@@ -1,8 +1,32 @@
-am2cmake: converts Makefile.am's to CMakeLists.txt
+PHPEMBED (Simplified API built on top of PHP SAPI)
 
-generate_findpackage_file: generate a cmake FindFoo.cmake file by asking
-some questions and filling out the rest
+Andrew Bosworth (boz@facebook.com)
 
-gencmake: tries to automatically generate CMakeLists.txt by looking at the directory contents
+Last Modified: 2008-Mar-23
 
-Alex
+Phpembed is distributed under the Phpembed open source software license.
+Please see the included LICENSE file.
+
+For more information on phpmbed usage see documentation in ./docs
+
+Installing phpembed
+==============================
+
+Pre-Requisites:
+================================
+
+php 5.x must be installed with --enable-embed option turned on.
+[ To enable building of embedded SAPI library ]
+
+
+Building phpembed library:
+=======================================
+NOTE: The phpembed library is just a more accessible and simplified library 
+built on top of of the PHP SAPI.
+
+This version of the phpembed library is built with cmake.
+
+First run cmake . to generate the make files.
+Then run make.
+
+The examples are currently not built.  Only the library is built.  
