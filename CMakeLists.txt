@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "cmake/Modules/")
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/phpembedVersion.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/phpembedVersion.h)
+find_package(PHP5 REQUIRED)
+include_directories(${PHP5_INCLUDE_DIR};${PHP5_MAIN_INCLUDE_DIR};${PHP5_EMBED_INCLUDE_DIR};${PHP5_ZEND_INCLUDE_DIR};${PHP5_TSRM_INCLUDE_DIR}) 
+add_subdirectory(src)
